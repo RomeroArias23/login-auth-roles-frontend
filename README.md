@@ -128,28 +128,6 @@ Security Features
 *   User is redirected to login when necessary
     
 
-Architecture Overview
----------------------
-
-src/app
-├── auth
-│ ├── auth.service.ts
-│ ├── auth.guard.ts
-│ ├── role.guard.ts
-│ └── login/
-├── interceptors
-│ ├── token.interceptor.fn.ts
-│ └── error.interceptor.ts
-├── components
-│ ├── admin/
-│ ├── advisor/
-│ ├── user/
-│ └── navbar/
-└── services
-└── data.service.ts
-
-The architecture follows separation of concerns, making the application scalable and maintainable.
-
 Tech Stack
 ----------
 
