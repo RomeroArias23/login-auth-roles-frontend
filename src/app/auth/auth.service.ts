@@ -15,7 +15,7 @@ export interface LoginResponse {
 export class AuthService {
 
   // Base URL for authentication-related endpoints
-  private api = 'http://localhost:3000/auth';
+  private api = 'https://login-auth-roles-backend.onrender.com/auth';
 
   // HttpClient is used to communicate with the backend API
   constructor(private http: HttpClient) {}

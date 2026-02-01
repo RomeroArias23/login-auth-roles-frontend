@@ -13,7 +13,7 @@ export interface ApiMessage {
 export class DataService {
 
   // Base URL for data-related backend endpoints
-  private baseUrl = 'http://localhost:3000/data';
+  private baseUrl = 'https://login-auth-roles-backend.onrender.com/data';
 
   // HttpClient is used to communicate with the REST API
   constructor(private http: HttpClient) {}
