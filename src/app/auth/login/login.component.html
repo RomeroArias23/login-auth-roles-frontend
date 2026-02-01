@@ -1,0 +1,75 @@
+<div class="login-wrapper">
+
+  <form
+    class="login-card"
+    [formGroup]="form"
+    (ngSubmit)="login()"
+  >
+
+    <h2>Authentication</h2>
+    <p class="subtitle">
+      Please sign in to continue
+    </p>
+
+    <!-- USERNAME -->
+    <div class="field">
+      <label>Username</label>
+      <input
+        type="text"
+        formControlName="username"
+        placeholder="Enter your username"
+      />
+    </div>
+
+    <!-- PASSWORD -->
+    <div class="field">
+      <label>Password</label>
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Enter your password"
+      />
+    </div>
+
+    <!-- ERROR -->
+    <div class="error" *ngIf="error">
+      {{ error }}
+    </div>
+
+    <!-- BUTTON -->
+    <button
+      type="submit"
+      class="btn-login"
+      [disabled]="form.invalid || loading"
+    >
+      {{ loading ? 'Signing in…' : 'Login' }}
+    </button>
+
+      <div class="test-box">
+        <h4>Test credentials</h4>
+
+        <ul>
+          <li>
+            <strong>User</strong>
+            <span>user1 / password1</span>
+          </li>
+
+          <li>
+            <strong>Advisor</strong>
+            <span>advisor1 / password2</span>
+          </li>
+
+          <li>
+            <strong>Admin</strong>
+            <span>admin1 / password3</span>
+          </li>
+        </ul>
+      </div>
+
+    <div class="footer">
+      Secure authentication · JWT protected
+    </div>
+
+  </form>
+
+</div>

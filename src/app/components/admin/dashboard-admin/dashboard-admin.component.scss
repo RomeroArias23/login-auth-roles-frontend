@@ -1,0 +1,92 @@
+/* Main dashboard layout container */
+.dashboard-container {
+  /* Full viewport height minus header height */
+  height: calc(100vh - 70px);
+
+  /* Flexbox layout for vertical centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Space between elements */
+  gap: 1rem;
+
+  /* Center text alignment */
+  text-align: center;
+
+  /* Smooth entrance animation */
+  animation: fadeIn 0.6s ease;
+}
+
+/* Dashboard title */
+h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  /* Accent color defined in theme variables */
+  color: var(--accent);
+}
+
+/* Supporting message text */
+.message {
+  font-size: 1.1rem;
+
+  /* Muted color for secondary text */
+  color: var(--light-muted);
+
+  /* Improve readability on large screens */
+  max-width: 420px;
+}
+
+/* Animated status indicator dot */
+.pulse-dot {
+  margin-top: 1.5rem;
+
+  width: 14px;
+  height: 14px;
+
+  /* Circular shape */
+  border-radius: 50%;
+
+  /* Accent color */
+  background: var(--accent);
+
+  /* Infinite pulsing animation */
+  animation: pulse 1.5s infinite;
+}
+
+/* ------------------------------
+   Animations
+--------------------------------*/
+
+/* Pulse animation for status dot */
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Fade-in animation for dashboard load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,145 @@
+/* =====================================================
+   Global CSS Variables (Design System)
+   ===================================================== */
+
+:root {
+  /* Primary brand colors */
+  --primary: #5d00ff;
+  --primary-light: #7a29ff;
+
+  /* Secondary brand colors */
+  --secondary: #ff2e9a;
+  --secondary-light: #ff5eb8;
+
+  /* Accent / highlight colors */
+  --accent: #cfff04;
+  --accent-dark: #b8e600;
+
+  /* Dark theme background colors */
+  --dark: #1c1c1c;
+  --dark-light: #252525;
+  --dark-lighter: #333;
+
+  /* Light text colors */
+  --light: #ffffff;
+  --light-dim: rgba(255, 255, 255, 0.85);
+  --light-muted: rgba(255, 255, 255, 0.6);
+
+  /* Border radius values */
+  --radius: 14px;
+  --radius-sm: 8px;
+
+  /* Shadow presets */
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+  /* Global transition timing */
+  --transition: 0.25s ease;
+}
+
+/* =====================================================
+   CSS Reset
+   ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-height layout support */
+html,
+body {
+  height: 100%;
+}
+
+/* =====================================================
+   Base Typography & Layout
+   ===================================================== */
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  /* Dark theme background */
+  background-color: var(--dark);
+
+  /* Default text color */
+  color: var(--light-dim);
+
+  line-height: 1.5;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+  color: var(--light);
+}
+
+/* Paragraph text */
+p {
+  color: var(--light-muted);
+}
+
+/* =====================================================
+   Buttons
+   ===================================================== */
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+
+  /* Smooth hover and state transitions */
+  transition: var(--transition);
+}
+
+/* Primary button */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+
+  &:hover {
+    background: var(--primary-light);
+  }
+}
+
+/* Secondary button */
+.btn-secondary {
+  background: var(--secondary);
+  color: white;
+
+  &:hover {
+    background: var(--secondary-light);
+  }
+}
+
+/* Accent button */
+.btn-accent {
+  background: var(--accent);
+  color: #000;
+
+  &:hover {
+    background: var(--accent-dark);
+  }
+}
+
+/* =====================================================
+   Card Component
+   ===================================================== */
+
+.card {
+  background: var(--dark-light);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+
+  /* Elevated surface appearance */
+  box-shadow: var(--shadow-card);
+
+  /* Subtle border for depth */
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}

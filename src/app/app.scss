@@ -1,0 +1,9 @@
+.app-container {
+  padding: 2rem;
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(
+    180deg,
+    var(--dark) 0%,
+    var(--dark-light) 100%
+  );
+}
