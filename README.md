@@ -47,7 +47,11 @@ Demo Users
 
 Use any of the following credentials to test different roles:
 
-RoleUsernamePasswordAdminadmin1password3Advisoradvisor1password2Useruser1password1
+| Role     | Username   | Password  |
+|----------|------------|-----------|
+| Admin    | `admin1`   | `password3` |
+| Advisor  | `advisor1` | `password2` |
+| User     | `user1`    | `password1` |
 
 Each role is redirected to its own protected dashboard.
 
